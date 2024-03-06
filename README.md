@@ -76,6 +76,22 @@ A maioria das ferramentas de teste opera fora do navegador e executa comandos re
 Essa arquitetura permite que o Cypress ouça e modifique o comportamento do navegador em tempo de execução, manipulando o DOM(Document Object Model) e alterando solicitações e respostas da rede em tempo real. Isso permite controle total(end-to-end) sobre a aplicação e execução de testes unitários, funcionais, de integração e de ponta a ponta.
 
 ## Seletores de elementos no Cypress
+Seletores no Cypress são métodos usados para identificar e selecionar elementos específicos em uma página da web durante a execução de testes automatizados. Eles servem como uma maneira de direcionar elementos HTML específicos para interagir com eles ou verificar seu estado durante a execução dos testes.
+
+### `cy.contains('Text')`
+Utilizado para localizar elementos que contêm um texto específico, ou seja, um conteúdo visível.
+
+### `cy.get('#elementID' ou '.elementClass' ou 'element')`
+Utilizado para selecionar elementos com base em uma variedade de critérios, como classes, IDs, atributos, texto e outros atributos
+
+### `cy.find('.child')`
+Utilizado para encontrar elementos filhos de um elemento selecionado anteriormente, é útil para selecionar elementos dentro de um contexto específico.
+
+### `cy.eq(value)`
+Utilizado para selecionar um elemento com base em seu índice dentro de um conjunto de elementos correspondentes, permite selecionar um elemento específico em uma lista de elementos.
+
+### `cy.xpath('/path')`
+Pode ser usado para seleções mais complexas baseadas em expressões XPath, isso permite uma maior flexibilidade na seleção de elementos.
 
 ## Comandos e asserções no Cypress
 
