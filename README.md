@@ -94,5 +94,49 @@ Utilizado para selecionar um elemento com base em seu índice dentro de um conju
 Pode ser usado para seleções mais complexas baseadas em expressões XPath, isso permite uma maior flexibilidade na seleção de elementos.
 
 ## Comandos e asserções no Cypress
+No contexto do Cypress, comandos e asserções são duas categorias principais de ações que você pode executar em seus testes automatizados para interagir com a aplicação sendo testada e verificar o comportamento esperado.
+
+### Comandos
+
+Usados para interagir com elementos da página da web, como clicar em botões, preencher campos de formulário, navegar entre páginas, etc.
+
+**`cy.click()`**
+
+Usado para simular um clique em um elemento na página da web durante a execução dos testes automatizados.
+
+**`cy.visit()`**
+
+Utilizado para navegar para uma URL específica durante a execução dos testes automatizados.
+
+**`cy.type()`**
+
+Usado para inserir texto em um elemento de entrada (como um campo de texto) na página da web durante a execução dos testes.
+
+### Asserções
+
+Usadas para verificar o estado ou o comportamento da aplicação durante a execução dos testes, podendo ser uma verificação se elementos estão visíveis, se contêm um determinado texto, se têm uma determinada classe, etc.
+
+**`cy.should('be.visible')`**
+
+Usada para verificar se um elemento na página está visível durante a execução dos testes automatizados.
+
+**`cy.should('contain', 'texto esperado')`**
+
+Usada para verificar se um elemento na página contém o texto especificado durante a execução dos testes automatizados.
+
+**`cy.should('have.class', 'classe esperada)`**
+
+Usada para verificar se um elemento na página possui a classe CSS especificada durante a execução dos testes automatizados.
+
+## Rodando testes com Cypress
+
+### `npx cypress open`
+Abre o Cypress Test Runner, onde é possícel executar testes interativamente.
+
+### `npx cypress run`
+Executa seus testes em modo headless (sem interface gráfica) e exibe os resultados no terminal.
+
+### `npx cypress run --spec "path_do_spec_especifico"`
+Executa um teste específico, fornecendo o caminho para o arquivo de teste.
 
 ## Descrição das etapas de preparação de um teste de interface, execução e verificação no Cypress
