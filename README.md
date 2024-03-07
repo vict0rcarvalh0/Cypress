@@ -139,4 +139,46 @@ Executa seus testes em modo headless (sem interface gráfica) e exibe os resulta
 ### `npx cypress run --spec "path_do_spec_especifico"`
 Executa um teste específico, fornecendo o caminho para o arquivo de teste.
 
-## Descrição das etapas de preparação de um teste de interface, execução e verificação no Cypress
+## Descrição das etapas de preparação de um teste de interface(AngularJS), execução e verificação no Cypress
+
+### Instalação do Cypress
+
+`npm install cypress --save-dev`
+
+### Configuração do Cypress
+
+O Cypress pode ser configurado por meio de um arquivo de configuração (cypress.json) para definir opções como URL base, seletor de elementos padrão, entre outros.
+
+### Estruturação dos testes
+
+Crie uma estrutura de pastas dentro do diretório de testes (geralmente cypress/integration) para organizar os testes. Por exemplo, pode-se ter pastas separadas para diferentes partes da aplicação, como autenticação, perfil do usuário, páginas específicas, etc.
+
+### Escrita dos testes
+
+Em arquivos com a extensão `.cy.ts`, estruture seus testes. Um exemplo simples de teste é o que confere o título da aplicação, que pode ser estruturado da seguinte forma:
+``` typescript
+describe('Counter', () => {
+  beforeEach(() => {
+    cy.visit('/');
+  });
+
+  it('has the correct title', () => {
+    cy.title().should('equal', 'Angular Workshop: Counters');
+  });
+});
+```
+
+### Execução
+
+Para executar os testes em Angular sem a interface do Cypress, basta utilizar o comando: `ng run app-name:cypress-run`.
+
+Para abrir a interface do Cypress a fim de executar os testes em Angular, é possível executar o seguinte comando: `ng run app-name:cypress-open`
+
+### Verificação dos testes no Cypress
+Acessando a interface após o comando `cypress-open` indicado, é possível escolher o seu browser(obs: sem suporte para Brave) e acessar a interface. Na aba "Specs", é possível rodar testes ou conjunto deles e acessar o resultado de forma fácil.
+
+Na seguinte imagem, o teste que exemplifiquei para checar o title da aplicação passou, já que está de acordo com 'Angular Workshop: Counters':
+
+<p align="center">
+  <img src="" width="80%">
+</p>
