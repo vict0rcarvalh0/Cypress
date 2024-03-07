@@ -75,6 +75,13 @@ A maioria das ferramentas de teste opera fora do navegador e executa comandos re
 
 Essa arquitetura permite que o Cypress ouça e modifique o comportamento do navegador em tempo de execução, manipulando o DOM(Document Object Model) e alterando solicitações e respostas da rede em tempo real. Isso permite controle total(end-to-end) sobre a aplicação e execução de testes unitários, funcionais, de integração e de ponta a ponta.
 
+Além do DOM, o Cypress acessa ferramentas de desenvolvimento, armazenamento local, camada de rede e objetos de janela, e sem fazer uso do WebDriver.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/17179877/74605728-8e547a80-50c2-11ea-8549-b804ef9b4996.png" width="80%">
+</p>
+
+
 ## Seletores de elementos no Cypress
 Seletores no Cypress são métodos usados para identificar e selecionar elementos específicos em uma página da web durante a execução de testes automatizados. Eles servem como uma maneira de direcionar elementos HTML específicos para interagir com eles ou verificar seu estado durante a execução dos testes.
 
@@ -180,5 +187,5 @@ Acessando a interface após o comando `cypress-open` indicado, é possível esco
 Na seguinte imagem, o teste que exemplifiquei para checar o title da aplicação passou, já que está de acordo com 'Angular Workshop: Counters':
 
 <p align="center">
-  <img src="" width="80%">
+  <img src="assets/print1.png" width="80%">
 </p>
